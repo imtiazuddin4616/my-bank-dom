@@ -54,6 +54,3 @@ You cannot withdray more amount than your Main balance`)
     
   }
 })
-
-
-
