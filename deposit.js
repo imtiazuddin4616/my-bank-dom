@@ -1,3 +1,4 @@
+
 let depositInput = document.getElementById('deposit-input');
 let withdrawInput = document.getElementById('withdraw-input');
 const depositBtn = document.getElementById('deposit-btn');
@@ -8,7 +9,7 @@ let WithdrawHistory;
 let depositHistory;
 let newBalance;
 let newWithdrawAmount;
-let date = new Date();
+
 
 
 depositBtn.addEventListener('click', function(){
@@ -18,7 +19,7 @@ depositBtn.addEventListener('click', function(){
   newBalance = currentDeposit + depositAmount; 
   document.getElementById('deposit-total').innerText = newBalance;
   document.getElementById('balance-total').innerText = newBalance;
-
+  let date = new Date();
   allDeposit.push(depositAmount)
 
   const p = document.createElement('p')
@@ -42,6 +43,7 @@ You cannot withdray more amount than your Main balance`)
     let previousWithdrawAmount =  parseFloat(document.getElementById('withdraw-total').innerText);
     let currentWithdrawAmount = previousWithdrawAmount + withdrawAmout
     document.getElementById('withdraw-total').innerText = currentWithdrawAmount
+    let date = new Date();
     allWithdraw.push(withdrawAmout)
     const p = document.createElement('p')
     allWithdraw.forEach(function(singleWithdraw, index){
